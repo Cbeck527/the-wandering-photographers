@@ -1,0 +1,26 @@
+---
+layout: base
+---
+
+<div id="grid">
+<ul id="album-grid">
+{% for post in site.posts %}
+<li>
+<a href="{{ post.url }}">{% image archive {{ post.image }} alt="{{ post.title }}" width="210" %}</a>
+</li>
+{% endfor %}
+</ul>
+</div>
+
+<script src="/js/jquery.wookmark.min.js"></script>
+<script src="/js/imagesloaded.min.js"></script>
+<script type="text/javascript">
+$('#album-grid li').imagesLoaded(function() {
+  var options = {
+    container: $('#grid'),
+    offset: 20,
+    itemWidth: 210
+  };
+  $('#album-grid li').wookmark(options);
+});
+</script>

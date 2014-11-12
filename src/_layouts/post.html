@@ -1,0 +1,17 @@
+---
+layout: base
+---
+
+<div id="imageBlock">
+    <img width="100%" alt="three hundred and fifteen" src="/images/{{ page.image }}" />
+</a>
+  <ul id="exifData">
+    {% exif %}
+  </ul>
+  <ul>
+    {% for tag in page.tags %}
+    <li>#{{ tag }}</li>
+    {% endfor %}
+  </ul>
+  <p>by {{ page.author}}</p>
+</div>

@@ -1,0 +1,25 @@
+# Site settings
+name: the wandering photographers
+email: chris@becker.am
+description: "The Wandering Photographers is a photo blog started by myself, Emily Shearing, and Ted Rysz. As we found ourselves on different coasts after college, we decided to document our our wanderings."
+baseurl: ""
+url: "http://thewanderingphotographers.com"
+paginate: 5
+
+# Build settings
+markdown: kramdown
+permalink: /:title
+source: src
+exiftag:
+  sources:
+    - images
+
+# image tag
+image:
+  source: images
+  output: images/resized
+  presets:
+    big:
+      width: 4000
+    archive:
+      width: 420

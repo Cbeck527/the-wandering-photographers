@@ -1,0 +1,28 @@
+---
+layout: base
+---
+
+{% for post in paginator.posts %}
+<div id="imageBlock">
+  <a href="{{ post.url }}">
+  {% image big {{ post.image }} width="100%" alt="{{ post.title }}" %}
+</a>
+<ul>
+  {% for tag in post.tags %}
+  <li>#{{ tag }}</li>
+  {% endfor %}
+</ul>
+<p>by {{ post.author }}</p>
+</div>
+{% endfor %}
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">&#8592; Previous</a>
+  {% else %}
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next &#8594;</a>
+  {% else %}
+  {% endif %}
+</div>
