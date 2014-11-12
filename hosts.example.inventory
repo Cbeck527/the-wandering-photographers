@@ -1,0 +1,2 @@
+[local]
+localhost rsync_host=user@website web_root=/var/www/
