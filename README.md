@@ -22,8 +22,10 @@ files into static HTML documents which makes it super easy to put on the web.
 Clone this repo, cd into the folder, `bundle install` the ruby requirements, and
 build away!
 
-    $ git clone https://github.com/Cbeck527/the-wandering-photographers.git $ cd
-the-wandering-photographers $ bundle install $ jekyll build
+    $ git clone https://github.com/Cbeck527/the-wandering-photographers.git
+    $ cd the-wandering-photographers
+    $ bundle install
+    $ jekyll build
 
 You'll have a new folder in the directory called `_site` that has all of the
 compiled HTML files ready to be thrown at a web server. Pretty nifty!
